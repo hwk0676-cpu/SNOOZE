@@ -153,25 +153,30 @@ body {
 
 header {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background-color: white;
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 header > img {
-  margin-left: 60px;
+  width: 150px;
+  margin-left: 70px;
 }
 
 .header_button {
   display: flex;
   gap: 55px;
-  margin-right: 60px;
+  margin-right: 70px;
 }
 
 .main_box {
+  margin-top: 60px;
   /* position: relative; */
   display: flex;
   justify-content: center;
@@ -180,7 +185,7 @@ header > img {
   font-weight: bold;
   text-align: center; */
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   overflow: hidden;
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* color: white; */
@@ -193,17 +198,18 @@ header > img {
   justify-content: center;
   gap: 100px;
   margin-top: 97px;
+  margin-left: 80px;
 }
 
 .txt_01 {
-  font-size: 2.5rem;
+  font-size: 2.2em;
   font-weight: bold;
   color: #22376d;
   line-height: 80px;
 }
 
 .txt_02 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #5a5d63;
   line-height: 33px;
@@ -211,7 +217,7 @@ header > img {
 
 .txt_03 {
   margin-top: 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #22376d;
   line-height: 38px;
@@ -223,31 +229,138 @@ header > img {
   margin-top: 65px;
 }
 
+.section02 {
+  position: relative;
+  background-image: url(img/bg_01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  align-items: flex-start; /* 추가 */
+  gap: 120px;
+  z-index: -3;
+  margin-top: 150px;
+}
+
+.section02::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 17, 41, 0.9);
+  z-index: -1;
+}
+
+.section02_box01 {
+  position: sticky;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  top: 150px; /* 필수 */
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.section02_box02 {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.section02_txt01 {
+  color: #acb2c0;
+  font-size: 1.2rem;
+  line-height: 34px;
+}
+
+.section02_graph {
+  width: 400px;
+  height: 380px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 70px;
+}
+.graph_box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.graph_txt01 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.graph_txt02 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.graph_txt03 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.section02_txt1-2 {
+  margin-top: 70px;
+}
+.section02_txt02 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 36px;
+  color: white;
+}
+
 .section03_title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #909dbf 45%, #22376d 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .section03_img {
   display: flex;
   justify-content: center;
-  gap: 53px;
-  margin-top: 70px;
+  gap: 30px;
+  margin-top: 50px;
 }
+
+.section03_img img {
+  width: 350px;
+}
+
+/* .section03_box01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+} */
 
 .section03_box01 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 290px;
-  margin-top: 97px;
+  margin-top: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 70px;
+}
+
+.section03_txt01 {
+  margin-left: 80px;
 }
 
 .section04_title {
@@ -255,10 +368,12 @@ header > img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 150px;
-  font-size: 3rem;
+  height: 120px;
+  font-size: 2.2rem;
   font-weight: bold;
-  background-color: #22376d;
+  background-color: #131e3b;
+  color: white;
+  margin-top: 100px;
 }
 
 .section04 {
@@ -266,43 +381,29 @@ header > img {
   width: 100%;
 }
 
-.card {
-  position: relative;
-  width: 33.333%;
-  height: 500px;
-  overflow: hidden;
-  text-decoration: none;
-  color: white;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .overlay {
   position: absolute;
-  bottom: 80px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
 
 .overlay h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .overlay p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .card {
   position: relative;
   width: 33.333%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   text-decoration: none;
   color: white;
@@ -315,7 +416,6 @@ header > img {
   object-fit: cover;
 }
 
-/* 어두운 그라디언트 */
 .card::before {
   content: "";
   position: absolute;
@@ -324,12 +424,6 @@ header > img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0)
-  ); */
 }
 
 .section05 {
@@ -367,13 +461,13 @@ header > img {
 }
 
 .section05_box02 p:nth-of-type(1) {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #22376d;
 }
 
 .section05_box02 p:nth-of-type(2) {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #22376d;
   margin-top: 15px;
@@ -387,7 +481,7 @@ header > img {
   margin-top: 15px;
 }
 
-.section06 {
+.footer {
   margin-top: 150px;
   display: flex;
   flex-direction: column;
@@ -398,18 +492,18 @@ header > img {
   color: #656565;
 }
 
-.section06_box01 {
+.footer_box01 {
   text-align: center;
   border-bottom: #656565 solid 1px;
   line-height: 35px;
   padding: 20px;
 }
 
-.section06_box01 > img {
+.footer_box01 > img {
   width: 150px;
 }
 
-.section06_box02 {
+.footer_box02 {
   display: flex;
   justify-content: center;
   margin-top: 30px;
